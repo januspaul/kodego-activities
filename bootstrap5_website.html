@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel's Burger</title>
+    <!--sheeeeeeeeeesh!-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+  <!--Container for all elements, fluid for resizing-->
+    <div class="container-fluid">
+      <!--contains all navigation elements, from home, menu, location, and about-->
+      <div class="row">
+        <div class="col-12-md p-3 ">
+          <nav class="navbar">
+            <div class="container-fluid justify-content-center"><!--is centered to make it presentable. nav bar is not collapsible unless VW is small-->
+              <a class="navbar-brand p-3" href="#">Home</a>
+              <a class="navbar-brand p-3" href="#">Burgers</a>
+              <a class="navbar-brand p-3" href="#">Cart</a>
+              <a class="navbar-brand p-3" href="#"><i class="fa-solid fa-burger" id="burgerIcon"></i></a><!--placeholder Icon only-->
+              <a class="navbar-brand p-3" href="#">Locations</a>
+              <a class="navbar-brand p-3" href="#">Contact</a>
+              <a class="navbar-brand p-3" href="#">About</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!--end of navbar-->
+      <hr class="p-3">
+      <!--start of carousel element-->
+      <div class="row">
+        <div class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <!--di ko alam pano yung may button si carousel kekw-->
+              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QWXpmahGt7yH68YOz1yjZAHaE8%26pid%3DApi&f=1&ipt=ddf82614818bf2af059e6885c5cc4bd136108143fae338311b9bbf05b4729f9b&ipo=images" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.cs8Jn4GSjBp_BnbBOV2gPgHaEK%26pid%3DApi&f=1&ipt=ca86ce90e4cf586ee3c778e05483a464733df908ce6d7868baf13f2449f2ca0b&ipo=images" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Xh16Uls9neqjrQSRa3XqjQHaE8%26pid%3DApi&f=1&ipt=eb6245c05977670e4ff137c432795666880eff088607475d5403b8f90e23afb8&ipo=images" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end of carousel-->
+      <hr class="p-3">
+      <!--start of header for content-->
+      <div class="row">
+        <div class="col-12-md p-3">
+          <h1 class="text-center">Our Burgers are so fresh its still Mooing!</h1>
+        </div>
+      </div>
+      <!--end of header for content#1-->
+      <hr class="p-3">
+      <!--start of cards-->
+      <div class="row">
+        <div class="col-sm-6 p-3"><!--First burger card, top left-->
+          <div class="card">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.l11VuNbgPSLzyliONgDYawHaHa%26pid%3DApi&f=1&ipt=73ca8f7431d6773bb86df57e51ac0dcf89338d276dcfd9b8fd00d16c7858c564&ipo=images" class="card-img-top" alt="e">
+            <div class="card-body">
+              <h5 class="card-title">Angel's Burger</h5>
+              <p class="card-text">Pack it up boys, She's coming home! All that juicy beefy goodness, packaged in a nice Brioche bun. Nice! Price starts at 200 Pesos.</p>
+              <!--card button calls offcanvas element instead of usual href-->
+              <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#order" aria-controls="order">Order Now!</a>
+              <!--off canvas button-->
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="order" aria-labelledby="orderlabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="orderlabel">Order page</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!--start of offcanvas body-->
+                <div class="offcanvas-body justify-content-center">
+                  <div class="form-check pl-2">
+                    <input class="form-check-input" type="radio" name="alacarte" id="alacarte">
+                    <label class="form-check-label" for="alacarte">
+                      ala carte
+                    </label>
+                  </div>
+                  <div class="form-check pl-2">
+                    <input class="form-check-input" type="radio" name="sides" id="sides" checked>
+                    <label class="form-check-label" for="sides">
+                      with sides and drinks
+                    </label>
+                  </div>
+                  <div class="input-group p-3">
+                    <label for="quantity"class="p-2">Quantity:</label>
+                    <input type="text" class="form-control pl-2" placeholder="1" aria-label="Order Quantity" id="quantity">
+                  </div>
+                  <a href="#" type="button" class="btn btn-primary pt-3">Proceed to check out</a>
+                </div>
+              </div>
+               <!--end of off canvas body-->
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 p-3"><!--Second burger card, top right-->
+          <div class="card">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.q5lIin_VtK16qNjYmX_9JwHaHa%26pid%3DApi&f=1&ipt=65fd2d88ea7b7f36a0df1895d6fde36f3038476e05caecacfbdb2edd78a82154&ipo=images" class="card-img-top" alt="e">
+            <div class="card-body">
+              <h5 class="card-title">Cheese Burger</h5>
+              <p class="card-text">A beef patty topped off with three kinds of cheese! Add some pickles, and Onions for that scrumptious experiece. Price starts at 150 Pesos.</p>
+               <!--card button calls offcanvas element instead of usual href-->
+              <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#order" aria-controls="order">Order Now!</a>
+              <!--off canvas button-->
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="order" aria-labelledby="orderlabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="orderlabel">Order page</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!--start of offcanvas body-->
+                <div class="offcanvas-body justify-content-center">
+                  <div class="form-check pl-2">
+                    <input class="form-check-input" type="radio" name="alacarte" id="alacarte">
+                    <label class="form-check-label" for="alacarte">
+                      ala carte
+                    </label>
+                  </div>
+                  <div class="form-check pl-2">
+                    <input class="form-check-input" type="radio" name="sides" id="sides" checked>
+                    <label class="form-check-label" for="sides">
+                      with sides and drinks
+                    </label>
+                  </div>
+                  <div class="input-group p-3">
+                    <label for="quantity"class="p-2">Quantity:</label>
+                    <input type="text" class="form-control pl-2" placeholder="1" aria-label="Order Quantity" id="quantity">
+                  </div>
+                  <a href="#" type="button" class="btn btn-primary pt-3">Proceed to check out</a>
+                </div>
+              </div>
+               <!--end of off canvas body-->
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 p-3"><!--third burger card, bottom left-->
+          <div class="card">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.eN2Kd5oppUMLNv7RBHLrHQHaHa%26pid%3DApi&f=1&ipt=2eb670ec8ffcda991b957ac25c5dc7ab07f5fab227e69f3947540f1f04586660&ipo=images" class="card-img-top" alt="e">
+            <div class="card-body">
+              <h5 class="card-title">Double Angel's Burger</h5>
+              <p class="card-text">Twice the price, twice the nice. What more could you ask for? Except for financial aid, or course. Price starts at 400 Pesos.</p>
+              <!--card button calls offcanvas element instead of usual href-->
+              <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#order" aria-controls="order">Order Now!</a>
+              <!--off canvas button-->
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="order" aria-labelledby="orderlabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="orderlabel">Order page</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!--start of offcanvas body-->
+                <div class="offcanvas-body justify-content-center">
+                  <div class="form-check pl-2">
+                    <input class="form-check-input" type="radio" name="alacarte" id="alacarte">
+                    <label class="form-check-label" for="alacarte">
+                      ala carte
+                    </label>
+                  </div>
+                  <div class="form-check pl-2">
+                    <input class="form-check-input" type="radio" name="sides" id="sides" checked>
+                    <label class="form-check-label" for="sides">
+                      with sides and drinks
+                    </label>
+                  </div>
+                  <div class="input-group p-3">
+                    <label for="quantity"class="p-2">Quantity:</label>
+                    <input type="text" class="form-control pl-2" placeholder="1" aria-label="Order Quantity" id="quantity">
+                  </div>
+                  <a href="#" type="button" class="btn btn-primary pt-3">Proceed to check out</a>
+                </div>
+              </div>
+               <!--end of off canvas body-->
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 p-3"><!--last burger card, bottom right-->
+          <div class="card">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.GDVeuc-E2cJRrpDyL9TL-QHaHa%26pid%3DApi&f=1&ipt=1e52c20ed44dd7c0527be335637cac6fbf4b57286d38d3b8e98482c84a263f53&ipo=images" class="card-img-top" alt="e">
+            <div class="card-body">
+              <h5 class="card-title">The Big Boy</h5>
+              <p class="card-text">Extra large portion of Everything. I don't know Chief, this might take two big guys to eat! Price starts at 600 Pesos</p>
+               <!--card button calls offcanvas element instead of usual href-->
+              <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#order" aria-controls="order">Order Now!</a>
+              <!--off canvas button-->
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="order" aria-labelledby="orderlabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="orderlabel">Order page</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!--start of offcanvas body-->
+                <div class="offcanvas-body justify-content-center">
+                  <div class="form-check pl-2">
+                    <input class="form-check-input" type="radio" name="alacarte" id="alacarte">
+                    <label class="form-check-label" for="alacarte">
+                      ala carte
+                    </label>
+                  </div>
+                  <div class="form-check pl-2">
+                    <input class="form-check-input" type="radio" name="sides" id="sides" checked>
+                    <label class="form-check-label" for="sides">
+                      with sides and drinks
+                    </label>
+                  </div>
+                  <div class="input-group p-3">
+                    <label for="quantity"class="p-2">Quantity:</label>
+                    <input type="text" class="form-control pl-2" placeholder="1" aria-label="Order Quantity" id="quantity">
+                  </div>
+                  <a href="#" type="button" class="btn btn-primary pt-3">Proceed to check out</a>
+                </div>
+              </div>
+               <!--end of off canvas body-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end of burger cards-->
+      <hr class="p-3">
+      <!--start of footer-->
+      <div class="d-flex justify-content-md-center">
+          <a href="#" class="p-3"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#" class="p-3"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#" class="p-3"><i class="fa-brands fa-square-twitter"></i></a>
+          <p class="p-3">We're open Tuesdays to Sundays from 1:00 PM to 2:00 AM. </p>
+          <p class="p-3">+0912345678</p><!--placeholder for proper contact info-->
+      </div>
+      <!--end of footer-->
+    </div>
+    <!--end of container-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

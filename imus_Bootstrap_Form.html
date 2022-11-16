@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yugi's Granpa's SUPER AWESOME Card Shop</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid pt-2">
+        <div class="row p-5">
+            <!-- left panel-->
+            <div class="col-4">
+                <h3 class="text-primary"><strong>Your Cart</strong><span class="badge rounded-pill bg-primary">3</span></h3>
+                <!--Super awesome list of cards-->
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Blue Eyes White Dragon</div>
+                        This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Dark Magician</div>
+                        The ultimate wizard in terms of attack and defense.
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Endymion, the Master Magician</div>
+                        You can Special Summon this card (from your hand or GY) by removing 6 Spell Counters from a "Magical Citadel of Endymion" you control. If Summoned this way: Target 1 Spell in your GY; add that target to your hand. Once per turn: You can discard 1 Spell, then target 1 card on the field; destroy that target.
+                      </div>
+                    </li>
+                </ul>            
+                <!--Button for redeeming promo codes. WOULD YOU LOOK AT THE TIME! IT'S TIME TO D-D-D-D-DUEL!--> 
+                <div class="input-group pt-2">
+                    <input type="text" class="form-control" placeholder="Insert Promo code">
+                    <button class="btn btn-primary" type="button">Redeem</button>
+                </div>
+            </div>
+            <div class="col-8 d-grid gap-3">
+                <form class="row g-3">
+                    <!--just your regular info collecting form-->
+                    <h3><strong>Billing Address</strong></h3>
+                    <!--pers nem-->
+                    <div class="col-md-6">
+                      <label for="firstname" class="form-label">First Name: </label>
+                      <input type="text" class="form-control" id="firstname" placeholder="Kaiba">
+                    </div>
+                    <!--las nem-->
+                    <div class="col-md-6">
+                      <label for="lastname" class="form-label">Last Name: </label>
+                      <input type="text" class="form-control" id="lastname" placeholder="Seto">
+                    </div>
+                    <!--user nem-->
+                    <div class="col-12">
+                      <label for="yeet" class="form-label">Username: </label>
+                      <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="username">@</span>
+                        <input type="text" class="form-control" placeholder="4th Rate duelist" aria-describedby="username" id="yeet">
+                      </div>
+                    </div>
+                    <!--emel-->
+                    <div class="col-12">
+                      <label for="email" class="form-label">Email: (optional)</label>
+                      <input type="email" class="form-control" id="email" placeholder="example@kaibacorp.com">
+                    </div>
+                    <!--barangay tibay-->
+                    <div class="col-md-12">
+                      <label for="barangaytibay" class="form-label">Barangay: </label>
+                      <input type="text" class="form-control" id="barangaytibay">
+                    </div>
+                    <!--duel city-->
+                    <div class="col-md-12">
+                        <label for="siyudadgrande" class="form-label">City: </label>
+                        <input type="text" class="form-control" id="siyudadgrande">
+                      </div>
+                      <!--the province-->
+                    <div class="col-md-4">
+                      <label for="angprobinsyano" class="form-label">Province: </label>
+                      <select id="angprobinsyano" class="form-select">
+                        <option selected>Japan</option>
+                        <option>Canada</option>
+                        <option>Africa</option>
+                        <option>Iran</option>
+                        <option>Antartica</option>
+                      </select>
+                    </div>
+                    <!--zippo-->
+                    <div class="col-md-2">
+                      <label for="zipper" class="form-label">Zip: </label>
+                      <input type="text" class="form-control" id="zipper">
+                    </div>
+                    <hr>
+                    <!--credit card options-->
+                    <h3>Payment</h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="yeet1">
+                        <label class="form-check-label" for="yeet1">
+                          Debit card
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="yeet2" checked>
+                        <label class="form-check-label" for="yeet2">
+                          Credit card
+                        </label>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="blueeyeswhitedragon" class="form-label">Name on Card: </label>
+                        <input type="text" class="form-control" id="blueeyeswhitedragon">
+                        <p class="text-muted">full name as displayed on card</p>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="darkmagician" class="form-label">Credit Card Number: </label>
+                        <input type="text" class="form-control" id="darkmagician">
+                      </div>
+                      <div class="col-md-3">
+                        <label for="greenlantern" class="form-label">Expiration: </label>
+                        <input type="text" class="form-control" id="greenlantern">
+                      </div>
+                      <div class="col-md-3">
+                        <label for="kopiko" class="form-label">CCV: </label>
+                        <input type="text" class="form-control" id="kopiko">
+                      </div>
+                        <hr>
+                        <!--submit-->
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary">Proceed to checkout</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
